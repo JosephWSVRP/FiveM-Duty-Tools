@@ -21,9 +21,9 @@ AddEventHandler('createDutyBlip', function()
     end
 
     playerBlip = AddBlipForEntity(playerPed)
-    SetBlipSprite(playerBlip, 1)  -- Set the blip icon (change if needed)
-    SetBlipColour(playerBlip, 3)  -- Set the blip color (green)
-    SetBlipScale(playerBlip, 1.0)  -- Adjust the size
+    SetBlipSprite(playerBlip, 3)  -- Set the blip icon (change if needed)
+    SetBlipColour(playerBlip, 0)  -- Set the blip color (green)
+    SetBlipScale(playerBlip, 0.55)  -- Adjust the size
     SetBlipAsShortRange(playerBlip, false)  -- Make the blip visible to all players with blips
 
     local blipLabel = "Emergency Services | " .. playerName
