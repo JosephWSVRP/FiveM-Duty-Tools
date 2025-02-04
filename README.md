@@ -25,7 +25,7 @@ Options to configure:
 
 #### Config: Commands to execute (FiveMDuty) (Note: This requires some brainpower)
 1. Locate the `FiveMDuty` Folder
-2. Locate the `server.lua`
+2. Locate the `client.lua`
 3. Scroll towards the bottom of each `RegisterCommand` section and find `ExecuteCommand`. These are the commands that will be executed when the registered command is run. These can be edited to any slash command run by a client (pressing T > /)
 
 #### Config: Duty Blip Commands (Note: This requires some brainpower)
