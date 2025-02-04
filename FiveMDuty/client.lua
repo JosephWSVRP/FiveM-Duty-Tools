@@ -29,9 +29,9 @@ RegisterCommand("leoduty", function()
     ShowNotification("~b~You are now on LEO duty.")
 
     -- Execute duty commands
-    ExecuteCommand("onduty leo ERRPXYZ")
-    ExecuteCommand("dutyblip on") -- Turn ON duty blip
-    ExecuteCommand("toggleshift")
+    ExecuteCommand("onduty leo <PASSWORD>") -- SEM Menu
+    ExecuteCommand("dutyblip on") -- Turn ON duty blip -- FiveMBlips
+    ExecuteCommand("toggleshift") -- ERS
 end, false)
 
 -- Fire/EMS Duty Command
@@ -52,9 +52,9 @@ RegisterCommand("fireduty", function()
     ShowNotification("~o~You are now on Fire/EMS duty.")
 
     -- Execute duty commands
-    ExecuteCommand("onduty fire ERRPXYZ")
-    ExecuteCommand("dutyblip on") -- Turn ON duty blip
-    ExecuteCommand("toggleshift")
+    ExecuteCommand("onduty fire <PASSWORD>") -- SEM Menu
+    ExecuteCommand("dutyblip on") -- Turn ON duty blip -- FiveMBlips
+    ExecuteCommand("toggleshift") -- ERS
 end, false)
 
 -- Off Duty Command
@@ -71,14 +71,14 @@ RegisterCommand("offduty", function()
     ShowNotification("~w~You are now OFF duty.")
 
     -- Execute off-duty commands
-    ExecuteCommand("dutyblip off") -- Turn OFF duty blip
-    ExecuteCommand("toggleshift")
+    ExecuteCommand("dutyblip off") -- Turn OFF duty blip -- FiveMBlips
+    ExecuteCommand("toggleshift") -- ERS
 
     -- Only execute the correct off-duty command based on the last job
     if currentJob == "LEO" then
-        ExecuteCommand("onduty leo ERRPXYZ")
+        ExecuteCommand("onduty leo <YOURPASSWORD>") -- SEM Menu
     elseif currentJob == "Fire" then
-        ExecuteCommand("onduty fire ERRPXYZ")
+        ExecuteCommand("onduty fire <YOURPASSWORD>") -- SEM Menu
     end
 
     -- Reset duty status
